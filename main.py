@@ -82,7 +82,7 @@ class MainWindow(QMainWindow):
         
         # Restore window geometry
         geometry = self.settings.value("geometry")
-        if geometry:
+        if (geometry):
             self.restoreGeometry(geometry)
             
         # Initialize theme
@@ -267,13 +267,6 @@ class MainWindow(QMainWindow):
         # Add menu bar
         self._create_menu_bar()
         
-        # Add theme toggle to toolbar
-        self.theme_button = QPushButton()
-        self.theme_button.setCheckable(True)
-        self.theme_button.setToolTip("Toggle Dark/Light Theme")
-        self.theme_button.clicked.connect(self.toggle_theme)
-        toolbar_layout.addWidget(self.theme_button)
-        
         # Add preset selector to controls
         preset_layout = QHBoxLayout()
         preset_label = QLabel("Preset:")
@@ -420,11 +413,9 @@ class MainWindow(QMainWindow):
             palette.setColor(QPalette.Highlight, QColor(42, 130, 218))
             palette.setColor(QPalette.HighlightedText, Qt.black)
             self.setPalette(palette)
-            self.theme_button.setText("🌞")
         else:
             self.setStyle(QStyleFactory.create("Fusion"))
             self.setPalette(self.style().standardPalette())
-            self.theme_button.setText("🌙")
     
     def update_recent_files_menu(self):
         """Update the recent files menu"""
