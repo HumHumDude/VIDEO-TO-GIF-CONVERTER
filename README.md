@@ -22,3 +22,6 @@ How to use : Just run main.py
 
 
 • Allows saving/loading presets (FPS, quality, speed, resolution)
+
+Example Image:
+![image](https://github.com/user-attachments/assets/f07b5a9a-40b0-4e70-b33c-aa5f3cad2834)
