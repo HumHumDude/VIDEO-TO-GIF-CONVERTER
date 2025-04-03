@@ -1,5 +1,7 @@
 How to use : Just run main.py
 
+• Simple interface that even a kid can use
+
 
 • Trims selected segments and excludes parts of a video
 
